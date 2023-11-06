@@ -29,7 +29,7 @@ var solution = [
 
 window.onload = function () {
     var display = document.getElementById("timer");
-    startTimer(600, display); // 600 seconds (10 minutes) for the timer
+    startTimer(600, display);
     startGame();
 }
 
@@ -100,13 +100,13 @@ function selectTile() {
             let c = parseInt(coords[1]);
 
             if (this.innerText === selectedNum.id) {
-                this.innerText = ""; // Clear the cell
+                this.innerText = "";
                 if (solution[b][c] !== selectedNum.id) {
                     errors = Math.max(0, errors - 1);
                     document.getElementById("errors").innerText = errors;
                 }
             } else {
-                this.innerText = selectedNum.id; // Place the selected number
+                this.innerText = selectedNum.id; 
                 if (solution[b][c] !== selectedNum.id) {
                     errors += 1;
                     document.getElementById("errors").innerText = errors;
